@@ -69,15 +69,15 @@ Run the OpenMP executable:
 ## Code Overview
 
 ### MPI Implementation (MPI.cpp)
-**Implements distributed parallelism across multiple processes.
-**Uses MPI communication primitives (MPI_Init, MPI_Gather, MPI_Reduce) to manage data sharing.
-**Each process handles a subset of the workload, and the results are aggregated at rank 0.
+-Implements distributed parallelism across multiple processes.
+-Uses MPI communication primitives (MPI_Init, MPI_Gather, MPI_Reduce) to manage data sharing.
+-Each process handles a subset of the workload, and the results are aggregated at rank 0.
 
 ### OpenMP Implementation (OpenMP.cpp)
-**Uses OpenMP directives (#pragma omp parallel, #pragma omp for, etc.) to parallelize computations.
-**Leverages shared memory for efficient data access among threads.
-**Implements fine-grained parallelism for tasks like traffic simulations.
+-Uses OpenMP directives (#pragma omp parallel, #pragma omp for, etc.) to parallelize computations.
+-Leverages shared memory for efficient data access among threads.
+-Implements fine-grained parallelism for tasks like traffic simulations.
 
 ## Performance Notes
-**MPI: Suitable for distributed systems where each node has its own memory. Scales well for large datasets.
-**OpenMP: Designed for shared-memory architectures. Provides ease of implementation with moderate scalability.
+-MPI: Suitable for distributed systems where each node has its own memory. Scales well for large datasets.
+-OpenMP: Designed for shared-memory architectures. Provides ease of implementation with moderate scalability.
